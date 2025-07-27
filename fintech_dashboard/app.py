@@ -1,11 +1,13 @@
 import streamlit as st
+import os
 from pages import price_prediction, volatility_modeling, portfolio_forecasting, anomaly_detection
 
 st.set_page_config(page_title="Fintech ML Dashboard", layout="wide", initial_sidebar_state="expanded")
 
-# Apply dark theme styling
-with open("assets/style.css") as f:
-    st.markdown(f"<style>{{f.read()}}</style>", unsafe_allow_html=True)
+# Load CSS from the correct relative path
+css_path = os.path.join(os.path.dirname(__file__), "assets", "style.css")
+with open(css_path) as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/6/6b/Bitcoin.svg", width=60)
 st.sidebar.title("📊 ML Navigation")

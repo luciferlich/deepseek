@@ -1,0 +1,16 @@
+
+body {
+    background-color: #111111;
+    color: #e0e0e0;
+}
+h1, h2, h3, h4 {
+    color: #66ffcc;
+}
+.sidebar .sidebar-content {
+    background-color: #1e1e1e;
+}
+.css-1d391kg, .stButton>button {
+    background-color: #222831;
+    color: #eeeeee;
+    border-radius: 5px;
+}
